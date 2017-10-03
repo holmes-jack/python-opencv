@@ -8,6 +8,7 @@ cimg = cv2.cvtColor(img,cv2.COLOR_GRAY2BGR)
 circles = cv2.HoughCircles(img,cv2.HOUGH_GRADIENT,1,80,
                             param1=50,param2=30,minRadius=5,maxRadius=40)
 
+
 circles = np.uint16(np.around(circles))
 for i in circles[0,:]:
     # draw the outer circle
